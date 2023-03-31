@@ -31,7 +31,7 @@ public class Exercicio {
         boolean endsWithRio = sentenceEndsWithRio(nameUniversity);
         System.out.println("Atring termina com RIO: " + endsWithRio);
 
-        //F) -> Possivel resolver com Regex
+        //F)
         int quantityDigitsInSentence = calculateQuantityDigitsInSentence(sentenceWithDigits);
         System.out.println("Quantidade de digitos na sentença: " + quantityDigitsInSentence);
 
