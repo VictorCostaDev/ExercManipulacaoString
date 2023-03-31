@@ -20,7 +20,7 @@ public class Exercicio {
         System.out.println("Versiculo em Maiusculo: " + sentenceToUpperCase);
 
         //C) 
-        int quantityOfVowels = calculateQuantityVowelsInSetence(fpC3V7.toLowerCase());
+        int quantityOfVowels = calculateQuantityVowelsInSentence(fpC3V7.toLowerCase());
         System.out.println("Quantidade de Vogais: " + quantityOfVowels);
 
         //D)
@@ -51,7 +51,7 @@ public class Exercicio {
         return quantityOfDigits;
     }
 
-    public static int calculateQuantityVowelsInSetence(String sentence) {
+    public static int calculateQuantityVowelsInSentence(String sentence) {
         int quantityOfVowels =  0;
         String[] sentenceArray = sentence.split("");
 
