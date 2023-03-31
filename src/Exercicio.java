@@ -52,10 +52,12 @@ public class Exercicio {
 
     public static int calculateQuantityVowelsInSetence(String sentence) {
         int quantityOfVowels =  0;
-        
-        for(int index = 0; index < sentence.length(); index++) {
-            char c = sentence.charAt(index);
-            if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') quantityOfVowels++;
+        String[] sentenceArray = sentence.split("");
+
+        for(int index = 0; index < sentenceArray.length; index++) {
+            String letter = sentenceArray[index];
+            boolean isVowel= letter.matches("[a|e|i|o|u]");
+            if(isVowel) quantityOfVowels++;
         }
 
         return quantityOfVowels;
