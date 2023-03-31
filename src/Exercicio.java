@@ -19,7 +19,7 @@ public class Exercicio {
         String sentenceToUpperCase = fpC3V7.toUpperCase();
         System.out.println("Versiculo em Maiusculo: " + sentenceToUpperCase);
 
-        //C) -> Possivel resolver com regex
+        //C) 
         int quantityOfVowels = calculateQuantityVowelsInSetence(fpC3V7.toLowerCase());
         System.out.println("Quantidade de Vogais: " + quantityOfVowels);
 
@@ -40,11 +40,12 @@ public class Exercicio {
 
     private static int calculateQuantityDigitsInSentence(String sentence) {
         int quantityOfDigits = 0;
+        String[] sentenceArray = sentence.split("");
 
-        for(int index = 0; index < sentence.length(); index++) {
-            char c = sentence.charAt(index);
-            if(c == '0'|| c == '1' || c == '2' || c == '3' ||c == '4')  quantityOfDigits++;
-            if(c == '5' || c == '6' || c == '7' || c == '8' || c == '9')  quantityOfDigits++;
+        for(int index = 0; index < sentenceArray.length; index++) {
+            String letter = sentenceArray[index];
+            boolean isDigit = letter.matches("\\d");
+            if(isDigit) quantityOfDigits++;
         }
 
         return quantityOfDigits;
